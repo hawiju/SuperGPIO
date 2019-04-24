@@ -54,6 +54,10 @@ inline void gpio::init(GPIO_TypeDef * port, mode m, type t, speed s, pupd p, af 
 		RCC->AHB1ENR |= RCC_AHB1ENR_GPIOGEN;
 	if (port == GPIOI)
 		RCC->AHB1ENR |= RCC_AHB1ENR_GPIOIEN;
+//	if (port == GPIOJ)                    //for big F7
+//		RCC->AHB1ENR |= RCC_AHB1ENR_GPIOJEN;
+//	if (port == GPIOK)
+//		RCC->AHB1ENR |= RCC_AHB1ENR_GPIOKEN;
 
 	uint32_t temp1 = 0, temp2 = 0;
 	((temp1|=(0b11<<(2*pins))), ... );
