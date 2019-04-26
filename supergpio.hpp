@@ -52,6 +52,8 @@ inline void gpio::init(GPIO_TypeDef * port, mode m, type t, speed s, pupd p, af 
 		RCC->AHB1ENR |= RCC_AHB1ENR_GPIOFEN;
 	if (port == GPIOG)
 		RCC->AHB1ENR |= RCC_AHB1ENR_GPIOGEN;
+	if (port == GPIOH)
+		RCC->AHB1ENR |= RCC_AHB1ENR_GPIOHEN;
 	if (port == GPIOI)
 		RCC->AHB1ENR |= RCC_AHB1ENR_GPIOIEN;
 //	if (port == GPIOJ)                    //for big F7
