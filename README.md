@@ -3,7 +3,7 @@
 C++17 driver for STM32 F4/F7 GPIO
 
 Requires "stm32f4xx.h" or "stm32f7xx.h" files
-
+and GCC 6 or higher
 -------------
 
 ## Usage
